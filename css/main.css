@@ -51,15 +51,19 @@ header{
 
 }
 
+@media screen and (max-width: 666px){
+    .title-container{
+        font-size: 1.5em;      
+    }
+}
+
 .city-container {
-    background-image: url("../images/background.jpg");
+    background-image: url("/images/background.jpg");
     -webkit-background-size: cover;
     background-size: 35%;
     
     /*display: flex;
     flex-flow: row wrap; */
-
-
 }
 
 :root, body{
@@ -73,8 +77,12 @@ header{
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-content: center;
+}
 
-
+@media screen and (max-width: 666px){
+    .city-container ul{
+        font-size: 1.5em;      
+    }
 }
 
 .city-container li{
@@ -82,23 +90,18 @@ header{
     flex-basis: 30%;
 }
 
-@media screen and (max-width:666 px){
+@media screen and (max-width: 666px){
     .city-container{
         background-repeat: repeat-x;
-        background-size: cover;
-    }
-}
-
-@media screen and (max-width: 600 px){
-    .title-container{
-        background: #FFFFFF;
+        background-size: cover;       
     }
 }
 
 .playlist-container{
-    background: #FEDFE7; 
+    background: #FEDFE7;
     height: 20em;
 }
+
 
 .footer-container{
     background: #03024E;
@@ -112,7 +115,12 @@ header{
     justify-content: space-evenly;
     align-content: center;
 
+}
 
+@media screen and (max-width: 666px){
+    .footer-container ul{
+        font-size: 1.5em;      
+    }
 }
 
 .footer-container li{
