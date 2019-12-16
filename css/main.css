@@ -89,6 +89,7 @@ header{
 
 .city-container li a{
     cursor: pointer;
+    user-select: none;
 }
 
 @media screen and (max-width: 666px){
@@ -105,32 +106,24 @@ header{
     flex-direction: column;
 }
 
-.song h2 h3{
-    margin-top: auto;
-    flex-grow: 4;
-    align-content: stretch;
-    flex-basis: 123px;
+#play{
+    width: 75px;
 }
 
-.controllers{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: center;
+#right{
+    width: 50px;
 }
 
-.controllers img{
-    color:
+#left{
+    width: 50px;
 }
-
-
 
 .footer-container{
     background: #03024E;
 }
 
 .footer-container ul{
-    font-size:2em;
+    font-size: 2em;
 
     display: flex;
     flex-flow: row wrap;
