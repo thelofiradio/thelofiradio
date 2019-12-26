@@ -3,17 +3,12 @@ var currentQueue = ['song', 'yes'];
 var currentSong = 1; //int
 var songIncrement = 0;
 
-
-
-
 // initializing
 console.log(SC);
 
 SC.initialize({
     client_id: 'r4nH5X72hWzUcXFiXFCBs275NbNMSF8Y',
 });
-
-
 
 // get playlist functions
 
@@ -120,11 +115,7 @@ function getGaming(){
       updateSong();
   });
 }
-
-
-
 console.log(currentQueue);
-
 
 // play function
 
@@ -137,7 +128,6 @@ function playSong(){
       });
     });
 }
-
 // console.log('f in the fucking chat boys');
 
 // functions for updating song titles
@@ -151,72 +141,81 @@ function updateSong(){
   
   document.getElementById('artist').innerText = (currentArtist);
   document.getElementById('song').innerText = (currentSong);
+
+  document.querySelector('.spinner').style.display = "none";
+  document.querySelector('.song').style.display = "block";
 }
 
 // Adding event listeners for subgenres
 var vocalFree = document.getElementById('vocalfree');
 vocalFree.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getVocalFree();
 });
 
 var heartbreak = document.getElementById('heartbreak');
 heartbreak.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getHeartbreak();
 });
 
 var calm = document.getElementById('calm');
 calm.addEventListener('mousedown', ()=>{
+  loading();  
   songIncrement = 0;
   getChill();
 });
 
 var japanese = document.getElementById('japanese');
 japanese.addEventListener('mousedown', ()=>{
+  loading();
   songIncrement = 0;
   getJapanese();
 });
 
 var meme = document.getElementById('meme');
 meme.addEventListener('mousedown', ()=>{
+  loading();
   songIncrement = 0;
   getMeme();
 });
 
 var seasonal = document.getElementById('seasonal');
 seasonal.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getSeasonal();
 });
 
 var jazzy = document.getElementById('jazzy');
 jazzy.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getJazzy();
 });
 
 var hiphop = document.getElementById('hiphop');
 hiphop.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getHipHop();
 });
 
 var gaming = document.getElementById('gaming');
 gaming.addEventListener('click', ()=>{
+  loading();
   songIncrement = 0;
   getGaming();
 });
 
-
 // skip song
-
 function skipSong(){
   songIncrement++;
 }
 
 // previous song
-
 function previousSong(){
   songIncrement--;
 }
@@ -224,12 +223,14 @@ function previousSong(){
 // event listener for navigation arrows
 var right = document.getElementById('right');
 right.addEventListener('click', ()=>{
+  loading();
   skipSong();
   updateSong();
 });
 
 var left = document.getElementById('left');
 left.addEventListener('click',()=>{
+  loading();
   previousSong();
   updateSong();
 });
@@ -239,6 +240,13 @@ play.addEventListener('click',()=>{
   playSong();
 });
 
+//loading animation and hides
+document.querySelector('.spinner').style.display = "none";
+
+function loading(){
+  document.querySelector('.spinner').style.display = "block";
+  document.querySelector('.song').style.display= "none";
+}
 
 
 
