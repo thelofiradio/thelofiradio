@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TheLofiRad.io</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel = "stylesheet" href ="css/main.css"> 
+    <link rel = "stylesheet" href ="main.css"> 
 </head>
 <body>
     <div class="title-container">
@@ -25,15 +25,15 @@
         <div class="container">
             <section>
                 <ul>
-                    <li> <a id="vocalfree">vocal-free</a> </li>
-                    <li> <a id="heartbreak">heart-break</a> </li>
-                    <li> <a id="calm">chill-hop</a> </li>
-                    <li> <a id="japanese">japanese</a> </li>
-                    <li> <a id="meme">meme</a> </li>
-                    <li> <a id="seasonal">seasonal</a> </li>
-                    <li> <a id="jazzy">jazz-hop</a> </li>
-                    <li> <a id="hiphop">hip-hop</a> </li>
-                    <li> <a id="gaming">gaming-tracks</a> </li>
+                    <li> <a class="play-button" data-play="413240996">vocal-free</a> </li>
+                    <li> <a class="play-button" data-play="945437497">heart-break</a> </li>
+                    <li> <a class="play-button" data-play="944939650">chill-hop</a> </li>
+                    <li> <a class="play-button" data-play="945453487">japanese</a> </li>
+                    <li> <a class="play-button" data-play="945461548">meme</a> </li>
+                    <li> <a class="play-button" data-play="945594007">seasonal</a> </li>
+                    <li> <a class="play-button" data-play="944951920">jazz-hop</a> </li>
+                    <li> <a class="play-button" data-play="945448732">hip-hop</a> </li>
+                    <li> <a class="play-button" data-play="945596899">gaming-tracks</a> </li>
                 </ul>
             </section>
         </div>
@@ -47,16 +47,19 @@
                 <h3 id="song">thanks for visiting ;)</h3>
             </div>
 
-            <div class="spinner">
+            <audio src="images/Eterna Demo 4.mp3" type="audio/mpeg"></audio>
+
+            <div class="spinner" style="display: none;">
                 <div class="double-bounce1"></div>
                 <div class="double-bounce2"></div>
               </div>
 
-            <div class="controllers"></div>
-                <img id="left" src="images/left.png" alt ="playlist-left">
-                <img id="play" src="images/play.png" alt ="playlist-pause">
-                <img id="right" src="images/right.png" alt ="playlist-right">
+            <div class="controllers">
+                <img id="left" src="images/left.png">
+                <img id="play" class="playPause" src="images/play.png">
+                <img id="right" src="images/right.png">
             </div>
+            
         
         </div>
     </div>
@@ -71,8 +74,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
 
