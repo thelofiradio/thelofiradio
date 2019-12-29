@@ -108,20 +108,25 @@ header{
 }
 
 .controllers {
-    display: block;
+    display: flex;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 68px;
 }
 
 #play{
-    width: 75px;
-    margin-top: 60px;
+    width: 70px;
     cursor: pointer;
+
+    transition: 100ms all ease;
 }
 
 #pause{
     width: 50px;
-    margin-top: 60px;
     cursor: pointer;
+
+    transition: 100ms all ease;
 }
 
 #right{
