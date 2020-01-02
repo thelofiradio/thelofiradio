@@ -30,6 +30,8 @@ function playButtonOnClick(event) {
     }
 
     playSong();
+    playPauseButton.id = 'pause';
+    playPauseButton.src = 'images/pause.png'
     stopLoading();
   });
 }
@@ -196,3 +198,10 @@ function togglePlayPause(event) {
 var playPauseButton = document.getElementsByClassName('playPause')[0];
 //playPauseButton.addEventListener('click', togglePlayPause);
 
+//autoplay
+audioElement.addEventListener('ended', (event) => {
+  console.log('song is over');
+  skipSong();
+  playSong();
+  updateSong();
+});
